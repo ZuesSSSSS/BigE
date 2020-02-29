@@ -14,11 +14,14 @@ router.get('/git-update', (req, res, next) => {
     shell.exit(1)
   }
 
-  var update = shell.exec('git fetch && git pull')
-  var install = shell.exec('npm i');
+  var git = shell.exec('git fetch && git pull')
+  var npm = shell.exec('npm i');
+  var processManager = shell.exec('pm2 restart index.js');
 
   res.status(200).json({
-    message: update,
+    git: git,
+    npm: npm,
+    processManager: processManager,
   })
   
 });
