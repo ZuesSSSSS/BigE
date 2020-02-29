@@ -1,0 +1,4 @@
+{
+  "styles":   "./src/scss/styles.scss",
+  "scripts":  "./src/js/index.js"
+}

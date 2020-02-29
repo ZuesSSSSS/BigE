@@ -1,0 +1,11 @@
+{
+  "name": "apiserver",
+  "version": "1.0.0",
+  "description": "BigE Restful API Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
