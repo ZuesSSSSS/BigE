@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack --mode=development --config webpack.config.js --watch",
     "prod": "webpack --mode=production --config webpack.config.js"
-  },
+  },  
   "author": "",
   "license": "ISC",
   "devDependencies": {
