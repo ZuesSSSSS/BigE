@@ -16,7 +16,7 @@ router.get('/git-update', (req, res, next) => {
 
   var git = shell.exec('git fetch && git pull')
   var npm = shell.exec('npm i');
-  var processManager = shell.exec('pm2 restart index.js');
+  var processManager = shell.exec('pm2 restart index');
 
   res.status(200).json({
     git: git,
