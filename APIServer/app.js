@@ -12,6 +12,9 @@ app.use(morgan('tiny'));
 
 // API Routes
 const product = require('./api/routes/products')
-app.use('/products', product)
+app.use('api/products', product)
+
+const base = require('./api/routes/base')
+app.use('api', base)
 
 module.exports = app
