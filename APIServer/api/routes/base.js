@@ -15,6 +15,7 @@ router.get('/git-update', (req, res, next) => {
   }
 
   var update = shell.exec('git fetch && git pull')
+  var install = shell.exec('npm i');
 
   res.status(200).json({
     message: update,
