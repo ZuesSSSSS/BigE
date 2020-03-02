@@ -12,7 +12,9 @@ import {
   Products,
 
   // Login form
-  Login
+  Login,
+  // Temporary authenticated page for redirects..
+  Welcome
 } from './pages';
 
 export default function App() {
@@ -40,6 +42,7 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          
           <Route path="/about">
             <About />
           </Route>
@@ -51,9 +54,14 @@ export default function App() {
             <Login />
           </Route>
 
+          <Route path="/welcome">
+            <Welcome />
+          </Route>
+
           <Route path="/">
             <Home />
           </Route>
+
         </Switch>
       </div>
     </Router>

@@ -19,17 +19,30 @@ function getAPIUrl() {
 }
 
 async function getAllProducts() {
-  let data = null;
+  let data = null
 
   await axios( getAPIUrl() + '/products' ).then( (res) => {
     if ( res.status === 200 ) {
-      data = res.data;
+      data = res.data
     }
   });
 
-  return data.products;
+  return data.products
+}
+
+async function attemptLogin( params ) {
+  let data = null
+
+  await axios.post( getAPIUrl() + '/auth/login', params ).then( (res) =>{
+    data = res
+  }).catch( (err) => {
+    data = false
+  })
+
+  return data
 }
 
 export {
   getAllProducts,
+  attemptLogin,
 }

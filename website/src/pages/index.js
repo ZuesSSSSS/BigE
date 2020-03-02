@@ -3,6 +3,7 @@ import About from './about/About';
 import Products from './products/Products';
 
 import Login from './auth/login/Login';
+import Welcome from './welcome/Welcome';
 
 export {
   Home,
@@ -10,4 +11,5 @@ export {
   Products,
 
   Login,
+  Welcome,
 }
