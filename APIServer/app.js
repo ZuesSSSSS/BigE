@@ -1,11 +1,15 @@
 const express = require('express')
-const helmet = require('helmet');
+const helmet = require('helmet')
 const morgan = require('morgan')
+const cors = require('cors')
 
 const app = express()
 
-// Middleware
+// Middleware that adds some nice headers to responses
 app.use(helmet());
+
+// Enable all CORS requests
+app.use(cors())
 
 // Access Logger
 app.use(morgan('tiny'));
