@@ -17,53 +17,40 @@ import {
   Welcome
 } from './pages';
 
-export default function App() {
+import {
+  Header
+} from './components'
 
+export default function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/products">Products</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
-          
+
           <Route path="/about">
+            <Header />
             <About />
           </Route>
+          
           <Route path="/products">
             <Products />
           </Route>
 
           <Route path="/login">
+            <Header />
             <Login />
           </Route>
 
           <Route path="/welcome">
+            <Header />
             <Welcome />
           </Route>
 
           <Route path="/">
+            <Header />
             <Home />
           </Route>
 
         </Switch>
-      </div>
     </Router>
   );
 }
