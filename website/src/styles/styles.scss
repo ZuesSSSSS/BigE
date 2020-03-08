@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #f7f7f7;
+  min-height: 100%;
+
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.row {
+  flex-flow: wrap;
+
+  .column {
+    margin-bottom: 2rem;
+    
+    @media (min-width: 40rem) {
+      width: 50%;
+    }
+
+    @media (min-width: 56rem) {
+      width: 33.333%;
+    }
+
+    @media (min-width: 64rem) {
+      width: 25%;
+    }
+  }
+
+}
+

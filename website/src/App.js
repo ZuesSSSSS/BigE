@@ -17,53 +17,59 @@ import {
   Welcome
 } from './pages';
 
+import {
+  AppContainer
+} from './components';
+
 export default function App() {
 
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/products">Products</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
+    <div className="app-container">
+      <Router>
+        <AppContainer>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          </nav>
+        </AppContainer>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/products">
-            <Products />
-          </Route>
+        <AppContainer>
+          <Switch>
+            
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/products">
+              <Products />
+            </Route>
 
-          <Route path="/login">
-            <Login />
-          </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-          <Route path="/welcome">
-            <Welcome />
-          </Route>
+            <Route path="/welcome">
+              <Welcome />
+            </Route>
 
-          <Route path="/">
-            <Home />
-          </Route>
+            <Route path="/">
+              <Home />
+            </Route>
 
-        </Switch>
-      </div>
-    </Router>
+          </Switch>
+        </AppContainer>
+      </Router>
+    </div>
   );
 }
