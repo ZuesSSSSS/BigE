@@ -18,12 +18,11 @@ import {
 } from './pages';
 
 import {
+  Header,
   AppContainer,
-  Header
 } from './components';
 
 export default function App() {
-
   return (
     <div className="app-container">
       <Router>
