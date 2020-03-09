@@ -18,11 +18,19 @@ import {
 } from './pages';
 
 import {
+<<<<<<< HEAD
   Header
 } from './components'
+=======
+  AppContainer
+} from './components';
+
+export default function App() {
+>>>>>>> laravel-lumen-api
 
 export default function App() {
   return (
+<<<<<<< HEAD
     <Router>
         <Switch>
 
@@ -52,5 +60,54 @@ export default function App() {
 
         </Switch>
     </Router>
+=======
+    <div className="app-container">
+      <Router>
+        <AppContainer>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          </nav>
+        </AppContainer>
+
+        <AppContainer>
+          <Switch>
+            
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/products">
+              <Products />
+            </Route>
+
+            <Route path="/login">
+              <Login />
+            </Route>
+
+            <Route path="/welcome">
+              <Welcome />
+            </Route>
+
+            <Route path="/">
+              <Home />
+            </Route>
+
+          </Switch>
+        </AppContainer>
+      </Router>
+    </div>
+>>>>>>> laravel-lumen-api
   );
 }
