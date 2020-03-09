@@ -18,7 +18,8 @@ import {
 } from './pages';
 
 import {
-  AppContainer
+  AppContainer,
+  Header
 } from './components';
 
 export default function App() {
@@ -26,28 +27,10 @@ export default function App() {
   return (
     <div className="app-container">
       <Router>
-        <AppContainer>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/products">Products</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            </ul>
-          </nav>
-        </AppContainer>
-
+        <Header/>
         <AppContainer>
           <Switch>
-            
+
             <Route path="/about">
               <About />
             </Route>
