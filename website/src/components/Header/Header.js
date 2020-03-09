@@ -9,19 +9,21 @@ export default function Header() {
         <title>BigE</title>
       </Helmet>
       <div class="nav-wrapper">
-        <nav id="header">
+        <nav id="header left">
           <ul class="nav-ul">
             <li class="nav-link">
               <a class="nav-link-a" id="logo" href="/">BigE</a>
             </li>
             <li class="nav-link">
-              <a class="nav-link-a" href="/products">| Products |</a>
+              <a class="nav-link-a" href="/products">Products</a>
             </li>
+          </ul>
+        </nav>
+        
+        <nav id="header right">
+          <ul class="nav-ul">
             <li class="nav-link">
-              <a class="nav-link-a">|</a>
-            </li>
-            <li class="nav-link right"> {/* Can't seem to Float to the right side*/}
-              <a class="nav-link-a" href="/login">| Login |</a>
+              <a class="nav-link-a" href="/login">Login</a>
             </li>
           </ul>
         </nav>
